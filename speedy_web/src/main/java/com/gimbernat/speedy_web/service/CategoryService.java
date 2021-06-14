@@ -1,6 +1,7 @@
 package com.gimbernat.speedy_web.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.gimbernat.speedy_web.model.Category;
 import com.gimbernat.speedy_web.repository.CategoryRepository;
@@ -18,5 +19,10 @@ public class CategoryService {
 	public void addCategory(Category category) {
 		categoryRepository.save(category);
 	}
-	
+	public void removeCategoryById(int id) {
+		categoryRepository.deleteById(id);
+	}
+	public Optional<Category> getCategoryById(int id){
+		return categoryRepository.findById(id);
+	}
 }
