@@ -1,11 +1,9 @@
 package com.gimbernat.speedy_web.dto;
 
-import com.gimbernat.speedy_web.model.Category;
-
 import lombok.Data;
 
 @Data
-public class ProductDTO {
+public class ProductDTO{
 	private Long id;
 	private String name;
 	private int categoryId;
@@ -13,12 +11,10 @@ public class ProductDTO {
 	private double weight;
 	private String description;
 	private String imageName;
-	public Long getId() {
-		return id;
+	
+	public Long getId() { return id; } public void setId(Long id) { this.id = id;
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	 
 	public String getName() {
 		return name;
 	}

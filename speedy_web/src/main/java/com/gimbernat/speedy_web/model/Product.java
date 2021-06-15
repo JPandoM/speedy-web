@@ -9,7 +9,8 @@ import lombok.Data;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	@Column(name = "product_id")
+	private Long id;
 	private String name;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -20,10 +21,10 @@ public class Product {
 	private String description;
 	private String imageName;
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
